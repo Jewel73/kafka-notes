@@ -3,4 +3,4 @@
 * listeners=PLAINTEXT://0.0.0.0:9092
 * advertised.listeners=PLAINTEXT://10.75.1.247:9092
 
-** Where, 10.75.1.247 is the network address to be resolved by the external machines (e.g. make sure you can ping that address, too)
+ Where, 10.75.1.247 is the network address to be resolved by the external machines (e.g. make sure you can ping that address, too)
