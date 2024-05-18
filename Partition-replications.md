@@ -10,14 +10,9 @@
 When a topic is created, Kafka organizes the partitions and their replicas in the broker's data directory. Assuming the data directory is `/var/lib/kafka/data`, the structure looks like this:
 
 **Example for Topic `my-topic` with 3 Partitions on 3 Brokers**:
-/var/lib/kafka/data/
-├── my-topic-0
-│ ├── 00000000000000000000.log
-│ ├── 00000000000000000000.index
-│ ├── 00000000000000000000.timeindex
-│ └── ...
-├── my-topic-1 (replica)
-└── my-topic-2 (replica)
+
+![image](https://github.com/Jewel73/kafka-notes/assets/46159821/a4b6bbd8-59ef-4bbe-805a-c7f45d4f2c1d)
+
 
 ## Examples
 
