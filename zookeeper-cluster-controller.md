@@ -1,4 +1,4 @@
-# Zookeeper in Kafka Cluster
+![image](https://github.com/Jewel73/kafka-notes/assets/46159821/a0915a7c-3b33-4a36-ad2b-dbc5eb01c29d)# Zookeeper in Kafka Cluster
 
 ## Introduction
 
@@ -17,6 +17,8 @@ Zookeeper plays a crucial role in managing Kafka clusters by maintaining metadat
   - `/brokers/ids`: Contains a list of broker IDs and their metadata.
   - `/brokers/topics`: Contains a list of topics and their partition assignments.
   - `/controller`: Contains information about the current controller broker.
+ 
+![image](https://github.com/Jewel73/kafka-notes/assets/46159821/7f310845-b5c4-48ba-b17b-5dc4979236f3)
 
 ## Viewing Zookeeper Brokers and IDs
 
@@ -29,5 +31,5 @@ To view Zookeeper brokers and their IDs, you can use the `zkCli.sh` script provi
 # List Zookeeper brokers and their IDs
 ls /brokers/ids
 
-![image](https://github.com/Jewel73/kafka-notes/assets/46159821/64bd59be-9992-4798-97d0-b8710b07d525)
+
 
