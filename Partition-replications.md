@@ -75,8 +75,10 @@ Each partition is replicated across all three brokers, providing redundancy and 
 
 - **Partitions** enable parallelism and scalability.
 - **Replication** ensures data redundancy and fault tolerance.
+- **Segments** divide partitions into sequentially numbered files on disk.
+- **Offsets** uniquely identify each record's position within a partition.
 - **Replication Factor**:
-  - `1`: No replicas, potential data loss on broker failure.
-  - `>1`: Multiple copies, enhanced reliability.
+- `1`: No replicas, potential data loss on broker failure.
+- `>1`: Multiple copies, enhanced reliability.
 
 By configuring the replication factor, you can balance fault tolerance and resource utilization in your Kafka cluster.
