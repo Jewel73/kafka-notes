@@ -5,9 +5,23 @@
 - **Partitions**: Each topic is divided into partitions, which are ordered sequences of records.
 - **Replication**: Partitions are replicated across multiple brokers to ensure fault tolerance.
 
+## Folder Structure
+
+When a topic is created, Kafka organizes the partitions and their replicas in the broker's data directory. Assuming the data directory is `/var/lib/kafka/data`, the structure looks like this:
+
+**Example for Topic `my-topic` with 3 Partitions on 3 Brokers**:
+/var/lib/kafka/data/
+├── my-topic-0
+│ ├── 00000000000000000000.log
+│ ├── 00000000000000000000.index
+│ ├── 00000000000000000000.timeindex
+│ └── ...
+├── my-topic-1 (replica)
+└── my-topic-2 (replica)
+
 ## Examples
 
-### Example 1: Replication Factor of 1
+### Example 1: Replication Factor of 1 : We want only one partition just no copy
 
 - **Topic**: `my-topic`
 - **Partitions**: 3
@@ -22,7 +36,7 @@
 **Description**:
 Each partition is stored on a single broker. No redundancy. If a broker fails, the partition it hosts becomes unavailable.
 
-### Example 2: Replication Factor of 3
+### Example 2: Replication Factor of 3 : we want two copy of orginal partition
 
 - **Topic**: `my-topic`
 - **Partitions**: 3
