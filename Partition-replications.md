@@ -71,7 +71,7 @@ Each partition is replicated across all three brokers, providing redundancy and 
 ![image](https://github.com/Jewel73/kafka-notes/assets/46159821/67780bec-9859-4c5d-ad95-d7b802f0056a)
 
 # NOTE : IMPORTANT
-offset is only unique in the partition, but in the topic , other partision may have same offset, so we need there things to get the specific message
+offset is only unique in the partition, but in the topic , other partision may have same offset, so we need three things to get the specific message
 * topic name
 * partition number
 * offset number
