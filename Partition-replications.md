@@ -63,6 +63,9 @@ Each partition is replicated across all three brokers, providing redundancy and 
 
 - **Segments**: Each partition is divided into segments, which are sequentially numbered files on disk. These segments are immutable and contain a fixed number of records.
 - **Offsets**: Within each partition, records are assigned unique offsets, representing their position in the partition. Offsets start from 0 and increment sequentially with each new record.
+
+## Here you can see the topic information and which pertition is leader in which broker - broker specify using number here
+
 ![image](https://github.com/Jewel73/kafka-notes/assets/46159821/67780bec-9859-4c5d-ad95-d7b802f0056a)
 
 
