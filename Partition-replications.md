@@ -76,6 +76,27 @@ offset is only unique in the partition, but in the topic , other partision may h
 * partition number
 * offset number
 
+# Kafka Partition Files
+
+## Key Concepts
+
+- **Segments**: Each partition is divided into segments, which are sequentially numbered files on disk.
+- **Offsets**: Within each partition, records are assigned unique offsets, representing their position in the partition.
+- **Index Files**: Index files contain a mapping of message offsets to their physical file positions.
+- **TimeIndex Files**: Time index files contain a mapping of message timestamps to their corresponding offsets.
+- **Log Files**: Log files contain the actual message data in binary format.
+
+## File Types
+
+- **.log**: Log files contain the actual message data in a binary format. They are immutable and have a fixed size. As the size of a log segment approaches its limit, Kafka begins writing new messages to a new segment file.
+- **.index**: Index files contain a mapping of message offsets to their physical file positions in the corresponding log segment. This allows Kafka to quickly locate messages by their offset.
+- **.timeindex**: Time index files contain a mapping of message timestamps to their corresponding offsets. They provide efficient retrieval of messages based on timestamps.
+
+## Folder Structure
+
+When a topic is created, Kafka organizes the partitions, segments, and their associated files in the broker's data directory. Assuming the data directory is `/var/lib/kafka/data`, the structure looks like this:
+
+
 ## Summary
 
 - **Partitions** enable parallelism and scalability.
