@@ -28,3 +28,6 @@ To view Zookeeper brokers and their IDs, you can use the `zkCli.sh` script provi
 
 # List Zookeeper brokers and their IDs
 ls /brokers/ids
+
+![image](https://github.com/Jewel73/kafka-notes/assets/46159821/64bd59be-9992-4798-97d0-b8710b07d525)
+
