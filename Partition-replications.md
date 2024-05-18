@@ -56,6 +56,15 @@ Each partition is stored on a single broker. No redundancy. If a broker fails, t
 
 **Description**:
 Each partition is replicated across all three brokers, providing redundancy and fault tolerance. If any broker fails, the remaining brokers have all the data.
+<img width="635" alt="image" src="https://github.com/Jewel73/kafka-notes/assets/46159821/4f95bbfa-e17b-4756-acfe-11be0649fa6e">
+
+
+## Segments and Offsets
+
+- **Segments**: Each partition is divided into segments, which are sequentially numbered files on disk. These segments are immutable and contain a fixed number of records.
+- **Offsets**: Within each partition, records are assigned unique offsets, representing their position in the partition. Offsets start from 0 and increment sequentially with each new record.
+![image](https://github.com/Jewel73/kafka-notes/assets/46159821/67780bec-9859-4c5d-ad95-d7b802f0056a)
+
 
 ## Summary
 
