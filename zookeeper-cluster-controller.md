@@ -1,4 +1,3 @@
-![image](https://github.com/Jewel73/kafka-notes/assets/46159821/a0915a7c-3b33-4a36-ad2b-dbc5eb01c29d)# Zookeeper in Kafka Cluster
 
 ## Introduction
 
